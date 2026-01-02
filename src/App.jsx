@@ -1,3 +1,5 @@
+//This is Personal Finance Dashboard using React and Vite.
+
 import { useState } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
 function App() {
