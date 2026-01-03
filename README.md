@@ -108,7 +108,7 @@ npm run dev
 
 **Madhav**
 - GitHub: [@Maddhav](https://github.com/Maddhav)
-- LinkedIn: [Your LinkedIn]
+- LinkedIn: https://www.linkedin.com/in/madhav-soni-435834274/
 
 ## 📄 License
 
