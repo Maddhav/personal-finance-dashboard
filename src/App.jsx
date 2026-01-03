@@ -1,12 +1,56 @@
 //This is Personal Finance Dashboard using React and Vite.
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
+
+// Add this export function
+const exportToCSV = (transactions) => {
+  // Create CSV header
+  const headers = ['Date', 'Type', 'Category', 'Description', 'Amount'];
+  
+  // Create CSV rows
+  const rows = transactions.map(t => [
+    t.date,
+    t.type,
+    t.category,
+    t.description || '',
+    t.amount
+  ]);
+  
+  // Combine header and rows
+  const csvContent = [
+    headers.join(','),
+    ...rows.map(row => row.join(','))
+  ].join('\n');
+  
+  // Create download link
+  const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+  const link = document.createElement('a');
+  const url = URL.createObjectURL(blob);
+  
+  link.setAttribute('href', url);
+  link.setAttribute('download', `finance-transactions-${new Date().toISOString().split('T')[0]}.csv`);
+  link.style.visibility = 'hidden';
+  
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
+
 function App() {
-  const [transactions, setTransactions] = useState([]); // Use state hook 
+  const [transactions, setTransactions] = useState(() => {
+  const saved = localStorage.getItem('transactions');
+  return saved ? JSON.parse(saved) : [];
+ });
 
   const [filter, setFilter] = useState('all'); // 'all', 'income', 'expense'
 const [searchCategory, setSearchCategory] = useState('');
+
+// Save to localStorage whenever transactions change
+  useEffect(() => {
+  localStorage.setItem('transactions', JSON.stringify(transactions));
+}, [transactions]);
   
   // Calculate totals
   const totalIncome = transactions
@@ -253,7 +297,37 @@ const COLORS = ['#3B82F6', '#EF4444', '#10B981', '#F59E0B', '#8B5CF6', '#EC4899'
 
 {/* Transaction List */}
 <div className="bg-white rounded-lg shadow-lg p-6">
-  <h2 className="text-2xl font-bold text-gray-800 mb-6">Transaction History</h2>
+  <div className="flex justify-between items-center mb-6">
+  <h2 className="text-2xl font-bold text-gray-800">Transaction History</h2>
+  
+  <div className="flex gap-3">
+    {/* Export to CSV Button */}
+    <button
+      onClick={() => exportToCSV(transactions)}
+      disabled={transactions.length === 0}
+      className={`px-4 py-2 rounded-lg font-semibold transition text-sm ${
+        transactions.length === 0
+          ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+          : 'bg-green-600 text-white hover:bg-green-700'
+      }`}
+    >
+      📥 Export to CSV
+    </button>
+    
+    {/* Clear All Data Button */}
+    <button
+      onClick={() => {
+        if (window.confirm('Are you sure you want to delete ALL transactions? This cannot be undone!')) {
+          setTransactions([]);
+          localStorage.removeItem('transactions');
+        }
+      }}
+      className="px-4 py-2 rounded-lg font-semibold bg-red-600 text-white hover:bg-red-700 transition text-sm"
+    >
+      🗑️ Clear All Data
+    </button>
+  </div>
+</div>
 
   {/* Filter Controls */}
 <div className="mb-6 space-y-4">
