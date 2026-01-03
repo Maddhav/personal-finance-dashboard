@@ -1,16 +1,119 @@
-# React + Vite
+# 💰 Personal Finance Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive web application for tracking personal income and expenses with real-time visualizations and data persistence.
 
-Currently, two official plugins are available:
+![Finance Dashboard](https://img.shields.io/badge/React-18-blue) ![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3-06B6D4) ![Status](https://img.shields.io/badge/Status-Live-success)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## React Compiler
+**[View Live Application →](YOUR_VERCEL_URL_HERE)**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- **💵 Transaction Management**: Add, view, and delete income and expense transactions
+- **📊 Visual Analytics**: Interactive pie chart showing expense breakdown by category
+- **🎯 Smart Filtering**: Filter transactions by type (income/expense) or search by category
+- **📈 Real-time Statistics**: 
+  - Current balance calculation
+  - Total income and expenses
+  - Savings rate percentage
+  - Transaction count by type
+- **💾 Data Persistence**: Automatic local storage - your data persists across sessions
+- **📱 Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
+- **🎨 Modern UI**: Clean interface built with Tailwind CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+- **Frontend**: React 18 with Hooks (useState, useEffect)
+- **Styling**: Tailwind CSS
+- **Charts**: Recharts
+- **Data Storage**: Browser Local Storage API
+- **Build Tool**: Vite
+- **Deployment**: Vercel
+
+## 📸 Screenshots
+
+### Dashboard Overview
+*Main dashboard showing balance, income, expenses, and transaction form*
+
+### Analytics View
+*Pie chart visualization and quick stats*
+
+### Transaction History
+*Filterable transaction list with search functionality*
+
+## 🎯 What I Learned
+
+- State management in React using hooks
+- Data visualization with Recharts library
+- Working with browser Local Storage API
+- Responsive design with Tailwind CSS utility classes
+- Form handling and validation in React
+- Array manipulation methods (filter, reduce, map)
+- Conditional rendering and dynamic styling
+
+##  Getting Started
+
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/Maddhav/personal-finance-dashboard.git
+cd personal-finance-dashboard
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Run the development server
+```bash
+npm run dev
+```
+
+4. Open [http://localhost:5173](http://localhost:5173) in your browser
+
+##  Usage
+
+1. **Add Transaction**: Fill in the form with type, amount, category, and description
+2. **View Summary**: See your current balance, total income, and expenses at the top
+3. **Filter Transactions**: Use filter buttons to view specific transaction types
+4. **Search**: Use the search box to find transactions by category
+5. **Delete**: Remove any transaction using the delete button
+6. **Clear Data**: Use "Clear All Data" to reset the dashboard
+
+## 🎨 Color Coding
+
+- 🟢 **Green**: Income transactions and positive balance
+- 🔴 **Red**: Expense transactions
+- 🔵 **Blue**: Active filters and primary actions
+
+## 🔮 Future Enhancements
+
+- [ ] Export data to CSV
+- [ ] Monthly/yearly view toggle
+- [ ] Budget setting and alerts
+- [ ] Multiple currency support
+- [ ] Dark mode
+- [ ] Backend integration for multi-device sync
+- [ ] Recurring transactions
+- [ ] Category icons
+
+## 👨‍💻 Author
+
+**Madhav**
+- GitHub: [@Maddhav](https://github.com/Maddhav)
+- LinkedIn: [Your LinkedIn]
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+---
+
+⭐ If you found this project helpful, please consider giving it a star!
