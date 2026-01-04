@@ -6,7 +6,8 @@ A modern, responsive web application for tracking personal income and expenses w
 
 ## 🚀 Live Demo
 
-**[View Live Application →](YOUR_VERCEL_URL_HERE)**
+**[View Live Application →](https://personal-finance-tracker-ten-amber.vercel.app)**
+
 
 ## ✨ Features
 
