@@ -9,6 +9,8 @@ A modern, responsive web application for tracking personal income and expenses w
 **[View Live Application →](https://personal-finance-tracker-ten-amber.vercel.app)**
 
 
+
+
 ## ✨ Features
 
 - **💵 Transaction Management**: Add, view, and delete income and expense transactions
@@ -37,11 +39,17 @@ A modern, responsive web application for tracking personal income and expenses w
 ### Dashboard Overview
 *Main dashboard showing balance, income, expenses, and transaction form*
 
+<img width="1470" height="800" alt="Screenshot 2026-01-03 at 8 39 52 PM" src="https://github.com/user-attachments/assets/60036e0b-c546-4243-9e9f-06ac4c3b1043" />
+
 ### Analytics View
 *Pie chart visualization and quick stats*
 
+<img width="1470" height="462" alt="Screenshot 2026-01-03 at 8 40 25 PM" src="https://github.com/user-attachments/assets/2f041fc5-58b9-462f-9cc4-b01b8f8b0594" />
+
 ### Transaction History
 *Filterable transaction list with search functionality*
+
+<img width="1470" height="544" alt="Screenshot 2026-01-03 at 8 40 51 PM" src="https://github.com/user-attachments/assets/7a20eff7-ddb9-4406-b053-e95bb351f55f" />
 
 ## 🎯 What I Learned
 
